@@ -8,7 +8,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const YOUR_DOMAIN = "https://still-plains-89607.herokuapp.com:3000";
+const YOUR_DOMAIN = "https://still-plains-89607.herokuapp.com/";
 
 app.post("/create-checkout-session", async (req, res) => {
     try {
@@ -101,5 +101,3 @@ app.post(
         response.send();
     }
 );
-
-app.listen(PORT, console.log("サーバーが起動しました"));
