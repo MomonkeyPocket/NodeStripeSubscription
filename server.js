@@ -1,6 +1,4 @@
-const stripe = require('stripe')(
-    'sk_test_51LqSUIL8a4GO17VdgRmzCEGuBiILVtkxBFvJavYUMiw1kR2OViNeIkadHgfeE4WYKb5OwjEDoiuD2xVbRMXm9XBz0060Xj7j4c'
-);
+const stripe = require('stripe')('');
 const express = require("express");
 const app = express();
 const PORT=process.env.PORT || 3000;
@@ -8,7 +6,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const YOUR_DOMAIN = "https://still-plains-89607.herokuapp.com/";
+const YOUR_DOMAIN = "http://localhost:3000";
 
 app.post("/create-checkout-session", async (req, res) => {
     try {
